@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { useState } from "react"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 
 const projects = [
@@ -32,7 +31,7 @@ const projects = [
 ]
 
 const Projects = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+ 
   const { ref, controls, variants } = useScrollAnimation("up")
 
   return (
