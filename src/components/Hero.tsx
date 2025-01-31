@@ -51,7 +51,7 @@ const Hero = () => {
         {/* Text Section */}
         <motion.div ref={textRef} initial="hidden" animate={textControls} variants={textVariants} className="md:w-1/2">
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
-            Hi, I'm <span ref={typedRef} className="text-primary inline-block min-w-[240px]" />
+            Hi, I am <span ref={typedRef} className="text-primary inline-block min-w-[240px]" />
           </h1>
           <h2 className="text-2xl md:text-3xl mb-6 text-foreground/80">Full Stack Developer & 2nd Year Software Engineering Student </h2>
           <p className="mb-8 text-foreground/60">I create amazing web experiences with cutting-edge technologies.</p>
