@@ -24,7 +24,7 @@ const About = () => {
           className="bg-purple-800 rounded-lg p-8 shadow-lg"
         >
           <p className="text-lg mb-4">
-          Hello! I'm a passionate full-stack developer & a 2nd year software engineering student at ISSATSO with a love for creating beautiful, functional, and
+          Hello! am a passionate full-stack developer & a 2nd year software engineering student at ISSATSO with a love for creating beautiful, functional, and
           user-friendly web applications and with a strong foundation in both front-end and back-end technologies</p>
 <p className="text-lg mb-4">
   Always exploring new technologies, contributing to open source, and solving challenges over a good cup of coffee.
