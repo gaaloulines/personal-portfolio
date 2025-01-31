@@ -90,6 +90,7 @@ const Header = () => {
                   href={`#${item.name.toLowerCase()}`}
                   onClick={() => {
                     setIsOpen(false)
+                    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                     handleScroll
                   }}
                   className={`hover:text-primary transition-colors flex items-center ${
