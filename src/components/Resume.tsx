@@ -82,7 +82,7 @@ const Resume = () => {
                 { name: "CCNA 2", image: "/ccna1.png", provider: "Cisco" },
                 { name: "DevNet Associate", image: "/devnet.png", provider: "Cisco" },
                 { name: "Cyber Threat Management", image: "/cybertm.jpeg", provider: "Cisco" },
-              ].map((cert, index) => (
+              ].map((cert) => (
                 <motion.div
                   key={cert.name}
                   variants={itemVariants}
