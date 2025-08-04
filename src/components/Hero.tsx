@@ -53,7 +53,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
             Hi, I am <span ref={typedRef} className="text-primary inline-block min-w-[240px]" />
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-6 text-foreground/80">Full Stack Developer & 2nd Year Software Engineering Student </h2>
+          <h2 className="text-2xl md:text-3xl mb-6 text-foreground/80">Full Stack Developer & 3rd Year Software Engineering Student </h2>
           <p className="mb-8 text-foreground/60">I create amazing web experiences with cutting-edge technologies.</p>
           <div className="flex space-x-4 mb-8">
             <motion.a
@@ -78,7 +78,7 @@ const Hero = () => {
             </motion.a>
           </div>
           <motion.a
-            href="/gaaloul_ines_resume.pdf"
+            href="/gaaloul ines.pdf"
             download
             className="inline-flex items-center bg-purple-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-8"
             whileHover={{ scale: 1.05 }}

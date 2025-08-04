@@ -105,7 +105,7 @@ const Resume = () => {
         </motion.div>
 
         <motion.a
-          href="/gaaloul ines (3).pdf" // Replace with your resume
+          href="/gaaloul ines.pdf" // Replace with your resume
           download
           className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full mt-12 mx-auto block w-fit"
           whileHover={{ scale: 1.05 }}

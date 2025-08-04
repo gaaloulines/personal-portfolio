@@ -28,10 +28,17 @@ const projects = [
     demoLink: "/videos/demo ticketing system.mp4",
     githubLink: "https://github.com/gaaloulines/ticketing-system",
   },
+    {
+    title: "My ISSATSO Forum",
+    description:
+      "Full-stack forum application designed for university students, using Angular for the frontend and Spring Boot for the backend. The platform enables real-time discussions through WebSocket integration and was tested by a group of users to ensure performance and usability. The project focused on creating a dynamic, responsive, and engaging environment for academic exchange.",
+    image: "/Capture.PNG",
+    demoLink: "/videos/demo forum app.mp4",
+    githubLink: "https://github.com/gaaloulines/ticketing-system",
+  },
 ]
 
 const Projects = () => {
- 
   const { ref, controls, variants } = useScrollAnimation("up")
 
   return (
