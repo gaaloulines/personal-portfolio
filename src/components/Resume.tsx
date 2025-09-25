@@ -56,6 +56,24 @@ const Resume = () => {
                 <li>Ticket tracking and management</li>
               </ul>
             </motion.div>
+
+            <motion.div variants={itemVariants} className="mb-4" whileHover="hover">
+  <h4 className="text-xl font-semibold text-blue-700">Full Stack Internship (Jul–Sep 2025)</h4>
+  <p className="text-gray-600">Mediwave</p>
+  <p className="text-gray-700 mt-2">
+    <strong>Technologies:</strong> React.js, NestJS
+  </p>
+  <p className="text-gray-700">
+    <strong>Project:</strong> Multifunctional Medical Platform
+  </p>
+  <ul className="list-disc list-inside mt-2 text-gray-700">
+    <li>Developed secure authentication with professional license verification</li>
+    <li>Implemented appointment scheduling, availability tracking, and automated reminders</li>
+    <li>Built digital medical records for test results, prescriptions, and clinical notes</li>
+    <li>Integrated real-time messaging, medical news feed, and event management features</li>
+  </ul>
+</motion.div>
+
           </motion.div>
 
           <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
