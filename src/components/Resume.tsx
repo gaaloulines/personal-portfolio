@@ -56,7 +56,6 @@ const Resume = () => {
                 <li>Ticket tracking and management</li>
               </ul>
             </motion.div>
-
             <motion.div variants={itemVariants} className="mb-4" whileHover="hover">
   <h4 className="text-xl font-semibold text-blue-700">Full Stack Internship (Jul–Sep 2025)</h4>
   <p className="text-gray-600">Mediwave</p>
