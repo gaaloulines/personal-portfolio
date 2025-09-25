@@ -14,21 +14,14 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-<<<<<<< HEAD
     "baseUrl": ".", // Add this line
-=======
->>>>>>> e3f6227 (v2 updatess(mini projet added))
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-<<<<<<< HEAD
       "@/*": ["src/*"] // Ensure this matches your project structure
-=======
-      "@/*": ["src/*"]
->>>>>>> e3f6227 (v2 updatess(mini projet added))
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

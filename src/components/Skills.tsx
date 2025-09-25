@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { FaJs, FaReact, FaNodeJs, FaDocker, FaGitAlt, FaJava, FaPhp } from "react-icons/fa"
-import { SiTypescript, SiNextdotjs, SiPostgresql, SiAngular, SiMysql, SiTailwindcss } from "react-icons/si"
+import { SiTypescript, SiNextdotjs, SiPostgresql, SiAngular, SiMysql, SiTailwindcss, SiNestjs, SiMongodb } from "react-icons/si"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 
 const skills = [
@@ -12,9 +12,12 @@ const skills = [
   { name: "Angular", icon: SiAngular },
   { name: "Laravel", icon: FaPhp },
   { name: "Node.js", icon: FaNodeJs },
+  { name: "Nest.js", icon: SiNestjs },
   { name: "Spring Boot", icon: FaJava },
   { name: "MySQL", icon: SiMysql },
   { name: "PostgreSQL", icon: SiPostgresql },
+    
+  { name: "MongoDb", icon: SiMongodb },
   { name: "Tailwind CSS", icon: SiTailwindcss },
   { name: "Git", icon: FaGitAlt },
   { name: "Docker", icon: FaDocker },
