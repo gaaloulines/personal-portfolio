@@ -1,4 +1,5 @@
 "use client"
+
 import { motion } from "framer-motion"
 import { FaDownload, FaBriefcase, FaGraduationCap, FaCertificate } from "react-icons/fa"
 import { useScrollAnimation } from "@/hooks/useScrollAnimation"
@@ -10,7 +11,7 @@ const Resume = () => {
   const sectionVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-    hover: { scale: 1.03, boxShadow: "0px 0px 8px rgba(0,0,0,0.2)", transition: { duration: 0.3 } },
+    hover: { scale: 1.02, transition: { duration: 0.3 } },
   }
 
   const itemVariants = {
@@ -18,6 +19,16 @@ const Resume = () => {
     visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
     hover: { x: 5, transition: { duration: 0.2 } },
   }
+
+  // Combined old and new certifications
+  const certifications = [
+    { name: "AI Fundamentals", provider: "IBM", image: "/ibm.png" }, // New
+    { name: "CyberOps Associate", provider: "Cisco", image: "/cisco.png" }, // New
+    { name: "CCNA 2 v7", provider: "Cisco", image: "/ccna.png" }, // Updated/New
+    { name: "CCNA 1", provider: "Cisco", image: "/ccna.png" }, // Old
+    { name: "DevNet Associate", provider: "Cisco", image: "/devnet.png" }, // Old
+    { name: "Cyber Threat Management", provider: "Cisco", image: "/cybertm.jpeg" }, // Old
+  ]
 
   return (
     <section id="resume" className="py-20 bg-gradient-to-br from-purple-900 to-indigo-900">
@@ -30,6 +41,7 @@ const Resume = () => {
         >
           My Resume
         </motion.h2>
+
         <motion.div
           ref={ref}
           initial="hidden"
@@ -37,100 +49,102 @@ const Resume = () => {
           variants={variants}
           className="grid md:grid-cols-2 gap-8"
         >
+          {/* LEFT COLUMN: Work Experience */}
           <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
-            <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
+            <h3 className="text-2xl font-bold mb-6 flex items-center text-purple-700">
               <FaBriefcase className="mr-2" /> Work Experience
             </h3>
-            <motion.div variants={itemVariants} className="mb-4" whileHover="hover">
-              <h4 className="text-xl font-semibold text-blue-700">Summer Internship (July-August 2023)</h4>
-              <p className="text-gray-600">Vaerdia Solutions</p>
-              <p className="text-gray-700 mt-2">
-                <strong>Technologies:</strong> Laravel, MySQL, Blade
-              </p>
-              <p className="text-gray-700">
-                <strong>Project:</strong> User Ticket Management System
-              </p>
-              <ul className="list-disc list-inside mt-2 text-gray-700">
-                <li>User authentication with role management</li>
-                <li>Customized dashboards for administrators, support agents, and clients</li>
-                <li>Ticket tracking and management</li>
+
+            {/* Anypli - Latest */}
+            <motion.div variants={itemVariants} className="mb-6 border-l-4 border-purple-500 pl-4" whileHover="hover">
+              <h4 className="text-xl font-bold text-blue-700">Full Stack Engineer (GenAI)</h4>
+              <p className="text-gray-600 font-semibold italic text-sm">Anypli — Feb 2026 – June 2026</p>
+              <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
+                <li>Architected a local <strong>RAG pipeline</strong> (Qwen2.5, FAISS, llama.cpp).</li>
+                <li>Automated ingredient extraction via <strong>PaddleOCR & Gemini Flash</strong>.</li>
+                <li>Built hybrid recommendation engines and a "Skin Twin" feature.</li>
               </ul>
             </motion.div>
-            <motion.div variants={itemVariants} className="mb-4" whileHover="hover">
-  <h4 className="text-xl font-semibold text-blue-700">Full Stack Internship (Jul–Sep 2025)</h4>
-  <p className="text-gray-600">Mediwave</p>
-  <p className="text-gray-700 mt-2">
-    <strong>Technologies:</strong> React.js, NestJS
-  </p>
-  <p className="text-gray-700">
-    <strong>Project:</strong> Multifunctional Medical Platform
-  </p>
-  <ul className="list-disc list-inside mt-2 text-gray-700">
-    <li>Developed secure authentication with professional license verification</li>
-    <li>Implemented appointment scheduling, availability tracking, and automated reminders</li>
-    <li>Built digital medical records for test results, prescriptions, and clinical notes</li>
-    <li>Integrated real-time messaging, medical news feed, and event management features</li>
-  </ul>
-</motion.div>
 
-          </motion.div>
-
-          <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
-            <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
-              <FaGraduationCap className="mr-2" /> Education
-            </h3>
-            <motion.div variants={itemVariants} className="mb-4" whileHover="hover">
-              <h4 className="text-xl font-semibold text-blue-700">Software Engineering</h4>
-              <p className="text-gray-600">ISSATSO (2024 - Present)</p>
+            {/* Mediwave */}
+            <motion.div variants={itemVariants} className="mb-6 border-l-4 border-blue-400 pl-4" whileHover="hover">
+              <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
+              <p className="text-gray-600 font-semibold italic text-sm">Mediwave — July 2025 – Sept 2025</p>
+              <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
+                <li>Built a <strong>microservice-based</strong> medical platform (React, NestJS).</li>
+                <li>Implemented smart scheduling and secure digital medical records.</li>
+              </ul>
             </motion.div>
-            <motion.div variants={itemVariants} whileHover="hover">
-              <h4 className="text-xl font-semibold text-blue-700">Pre-engineering (MPI)</h4>
-              <p className="text-gray-600">ISSATSO (2021 - 2023)</p>
+
+            {/* Vaerdia Solutions */}
+            <motion.div variants={itemVariants} className="border-l-4 border-gray-300 pl-4" whileHover="hover">
+              <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
+              <p className="text-gray-600 font-semibold italic text-sm">Vaerdia Solutions — June 2024 – Aug 2024</p>
+              <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
+                <li>Developed customer-support app with <strong>Spring Boot & Angular</strong>.</li>
+                <li>Reduced processing time by 60% and automated deployment with <strong>Docker</strong>.</li>
+              </ul>
             </motion.div>
           </motion.div>
 
-          <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg md:col-span-2">
-            <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
-              <FaCertificate className="mr-2" /> Certifications
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { name: "CCNA 1", image: "/ccna1.png", provider: "Cisco" },
-                { name: "CCNA 2", image: "/ccna1.png", provider: "Cisco" },
-                { name: "DevNet Associate", image: "/devnet.png", provider: "Cisco" },
-                { name: "Cyber Threat Management", image: "/cybertm.jpeg", provider: "Cisco" },
-              ].map((cert) => (
-                <motion.div
-                  key={cert.name}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgba(0,0,0,0.2)" }}
-                  className="bg-gradient-to-r from-purple-500 to-indigo-500 p-4 rounded-lg text-white text-center shadow-md"
-                >
-                  <Image
-                    src={cert.image || "/placeholder.svg"}
-                    alt={cert.name}
-                    width={64}
-                    height={64}
-                    className="mx-auto mb-2"
-                  />
-                  <h4 className="font-semibold">{cert.name}</h4>
-                  <p className="text-sm">{cert.provider}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* RIGHT COLUMN: Education & Certifications */}
+          <div className="flex flex-col gap-8">
+            {/* Education Section - Split as requested */}
+            <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
+              <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
+                <FaGraduationCap className="mr-2" /> Education
+              </h3>
+              <motion.div variants={itemVariants} className="mb-6" whileHover="hover">
+                <h4 className="text-lg font-bold text-blue-700">National Engineering Degree in Software Engineering</h4>
+                <p className="text-gray-600">ISSAT Sousse (2023 - 2026)</p>
+                <p className="text-xs text-gray-400 italic mt-1">Focus: Full Stack Dev & AI Integration</p>
+              </motion.div>
+              <motion.div variants={itemVariants} whileHover="hover">
+                <h4 className="text-lg font-bold text-blue-700">Pre-engineering (MPI)</h4>
+                <p className="text-gray-600">ISSAT Sousse (2021 - 2023)</p>
+                <p className="text-xs text-gray-400 italic mt-1">Mathematics, Physics, and Computer Science</p>
+              </motion.div>
+            </motion.div>
+
+            {/* Certifications Section - Combined */}
+            <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
+              <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
+                <FaCertificate className="mr-2" /> Certifications
+              </h3>
+              <div className="grid grid-cols-2 gap-3">
+                {certifications.map((cert) => (
+                  <motion.div
+                    key={cert.name}
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.03 }}
+                    className="flex flex-col items-center p-3 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg border border-purple-100 text-center"
+                  >
+                    <div className="w-10 h-10 relative mb-2">
+                      <Image
+                        src={cert.image || "/placeholder.svg"}
+                        alt={cert.provider}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <h4 className="font-bold text-[10px] sm:text-xs text-indigo-900 leading-tight uppercase tracking-tighter">
+                      {cert.name}
+                    </h4>
+                    <p className="text-[10px] text-purple-600">{cert.provider}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
 
+        {/* Download Button */}
         <motion.a
-          href="/gaaloul ines.pdf" // Replace with your resume
+          href="/gaaloul_ines_resume.pdf"
           download
-          className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full mt-12 mx-auto block w-fit"
+          className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full mt-12 mx-auto block w-fit shadow-lg shadow-purple-900/20"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          variants={{
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { delay: 0.8 } },
-          }}
         >
           <FaDownload className="mr-2" />
           Download Full Resume (PDF)
@@ -141,4 +155,3 @@ const Resume = () => {
 }
 
 export default Resume
-
