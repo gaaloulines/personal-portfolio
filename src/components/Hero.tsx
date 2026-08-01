@@ -16,7 +16,7 @@ const Hero = () => {
   useEffect(() => {
     if (typedRef.current) {
       typed.current = new Typed(typedRef.current, {
-        strings: ["Ines","A Developer", "A Software Engineering Student"],
+        strings: ["Ines","A Developer", "A Software Engineer"],
         typeSpeed: 100,
         backSpeed: 80,
         backDelay: 2000,
@@ -53,7 +53,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-foreground">
             Hi, I am <span ref={typedRef} className="text-primary inline-block min-w-[240px]" />
           </h1>
-          <h2 className="text-2xl md:text-3xl mb-6 text-foreground/80">Full Stack Developer & 3rd Year Software Engineering Student </h2>
+          <h2 className="text-2xl md:text-3xl mb-6 text-foreground/80">Full Stack Developer & freshly graduated Software Engineer & AI Enthusiast </h2>
           <p className="mb-8 text-foreground/60">I create amazing web experiences with cutting-edge technologies.</p>
           <div className="flex space-x-4 mb-8">
             <motion.a
