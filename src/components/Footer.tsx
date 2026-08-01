@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="text-center md:text-left mb-4 md:mb-0">
             <h3 className="text-xl font-bold">Ines Gaaloul</h3>
             <p className="text-foreground/60">Full Stack Developer</p>
-            <p className="text-foreground/60">Software Engineering Student</p>
+            <p className="text-foreground/60">Software Engineer</p>
           </div>
           <div className="flex space-x-4">
             <motion.a
