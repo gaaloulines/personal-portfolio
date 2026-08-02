@@ -54,14 +54,28 @@ const Resume = () => {
             </h3>
 
             <motion.div variants={itemVariants} className="mb-6 border-l-4 border-purple-500 pl-4" whileHover="hover">
-              <h4 className="text-xl font-bold text-blue-700">Full Stack Engineer (GenAI)</h4>
-              <p className="text-gray-600 font-semibold italic text-sm">Anypli — Feb 2026 – June 2026</p>
-              <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
-                <li>Architected a local <strong>RAG pipeline</strong> (Qwen2.5, FAISS, llama.cpp).</li>
-                <li>Automated ingredient extraction via <strong>PaddleOCR & Gemini Flash</strong>.</li>
-                {/* Fixed the quotation marks here */}
-                <li>Built hybrid recommendation engines and a &quot;Skin Twin&quot; feature.</li>
-              </ul>
+              <h4 className="text-xl font-bold text-blue-700">Full Stack & AI Engineer  h4>
+              <p className="text-gray-600 font-semibold italic text-sm">Anypli — Feb 2026 – July 2026</p>
+               <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
+    <li>
+      Designed and developed <strong>SkinTalk</strong>, a GenAI-powered community platform for cosmetic product analysis using <strong>React.js, Laravel, and MySQL</strong>.
+    </li>
+    <li>
+      Deployed <strong>FastAPI microservices</strong> on <strong>Hugging Face Spaces</strong>, integrating <strong>PaddleOCR, LLMs (Qwen2.5), and a RAG pipeline</strong> for automated ingredient list processing.
+    </li>
+    <li>
+      Engineered a personalized <strong>compatibility engine</strong> that maps product ingredients to user skin profiles (type, allergies, concerns) to generate scores, confidence levels, and tailored explanations.
+    </li>
+    <li>
+      Built a hybrid recommendation system using <strong>FAISS vector embeddings</strong>, featuring a <strong>&quot;Dupe Finder&quot;</strong> and <strong>&quot;Skin Twin&quot;</strong> matching for high-precision product suggestions.
+    </li>
+    <li>
+      Implemented real-time features with <strong>WebSockets</strong>, secure <strong>JWT/OAuth 2.0</strong> authentication, and a containerized architecture using <strong>Docker</strong>.
+    </li>
+    <li>
+      Managed the full <strong>Agile SDLC</strong>, from requirements analysis and system design to deployment and continuous iterative improvements.
+    </li>
+  </ul>
             </motion.div>
 
             <motion.div variants={itemVariants} className="mb-6 border-l-4 border-blue-400 pl-4" whileHover="hover">
