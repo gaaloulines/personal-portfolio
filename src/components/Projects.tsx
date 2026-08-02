@@ -5,6 +5,14 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation"
 
 const projects = [
   {
+    title: "SkinTalk - An AI powered Cosmetic Platform",
+    description:
+      "An intelligent community platform for cosmetic product analysis and recommendation. It features a Full Stack architecture (React, Laravel, FastAPI) with AI microservices deployed on Hugging Face Spaces. The system integrates OCR, LLMs, and a local RAG pipeline to provide personalized compatibility scores, explanations, and vector-based recommendations (Dupe Finder & Skin Twin) using FAISS.",
+    image: "/login web.png", // Replace with your actual screenshot path
+    demoLink: "/videos/demo skintalk finaleeee (1).mp4", // Update with your actual demo or video link
+    githubLink: "https://github.com/gaaloulines/", // Update with your actual repo
+  },
+  {
     title: "Intelligent text summarizer",
     description:
       "This is a Text Analysis and Summarization Platform built with Next.js, Prisma, PostgreSQL, and integrates MeaningCloud API for text analysis. The platform allows users to generate text summaries, extract key phrases, perform sentiment analysis, and even convert text to speech. Users can view their summary history and analyze both pasted text and uploaded files.",
@@ -28,13 +36,13 @@ const projects = [
     demoLink: "/videos/demo ticketing system.mp4",
     githubLink: "https://github.com/gaaloulines/ticketing-system",
   },
-    {
+  {
     title: "My ISSATSO Forum",
     description:
       "Full-stack forum application designed for university students, using Angular for the frontend and Spring Boot for the backend. The platform enables real-time discussions through WebSocket integration and was tested by a group of users to ensure performance and usability. The project focused on creating a dynamic, responsive, and engaging environment for academic exchange.",
     image: "/Capture.PNG",
     demoLink: "/videos/demo forum app.mp4",
-    githubLink: "https://github.com/gaaloulines/ticketing-system",
+    githubLink: "https://github.com/gaaloulines/issatso-forum",
   },
 ]
 
@@ -42,7 +50,7 @@ const Projects = () => {
   const { ref, controls, variants } = useScrollAnimation("up")
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-20 bg-indigo-950 text-white">
       <div className="container mx-auto px-6">
         <motion.h2
           className="text-4xl font-bold mb-12 text-center"
@@ -71,7 +79,7 @@ const Projects = () => {
                 },
               }}
               whileHover={{ scale: 1.05, zIndex: 1 }}
-              className="bg-purple-800 rounded-lg overflow-hidden shadow-lg transition-all duration-300"
+              className="bg-purple-900/40 border border-purple-500/30 rounded-xl overflow-hidden shadow-lg transition-all duration-300 backdrop-blur-sm"
             >
               <motion.div
                 className="relative h-48 overflow-hidden"
@@ -86,16 +94,15 @@ const Projects = () => {
                   className="transition-transform duration-300"
                 />
                 <motion.div
-                  className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0"
-                  whileHover={{ opacity: 1 }}
+                  className="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
                 >
-                  <div className="text-white text-center">
-                    <p className="font-bold text-lg mb-2">View Project</p>
-                    <div className="flex space-x-4">
+                  <div className="text-white text-center p-4">
+                    <p className="font-bold text-lg mb-4">View Project</p>
+                    <div className="flex justify-center space-x-4">
                       {project.demoLink && (
                         <a
                           href={project.demoLink}
-                          className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
+                          className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
@@ -105,11 +112,11 @@ const Projects = () => {
                       {project.githubLink && (
                         <a
                           href={project.githubLink}
-                          className="bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors duration-300"
+                          className="bg-gray-800 hover:bg-gray-700 text-white text-sm font-bold py-2 px-4 rounded-full transition-colors duration-300"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          GitHub Repo
+                          GitHub
                         </a>
                       )}
                     </div>
@@ -117,8 +124,8 @@ const Projects = () => {
                 </motion.div>
               </motion.div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3">{project.title}</h3>
-                <p className="text-sm text-gray-300 mb-4">{project.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-purple-200">{project.title}</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">{project.description}</p>
               </div>
             </motion.div>
           ))}
@@ -129,4 +136,3 @@ const Projects = () => {
 }
 
 export default Projects
-
