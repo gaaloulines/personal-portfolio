@@ -48,36 +48,26 @@ const Resume = () => {
           variants={variants}
           className="grid md:grid-cols-2 gap-8"
         >
+          {/* LEFT COLUMN: Experience */}
           <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
             <h3 className="text-2xl font-bold mb-6 flex items-center text-purple-700">
               <FaBriefcase className="mr-2" /> Work Experience
             </h3>
 
-            <motion.div variants={itemVariants} className="mb-6 border-l-4 border-purple-500 pl-4" whileHover="hover">
-              <h4 className="text-xl font-bold text-blue-700">Full Stack & AI Engineer  h4>
+            {/* Anypli - ENRICHED SECTION */}
+            <motion.div variants={itemVariants} className="mb-8 border-l-4 border-purple-500 pl-4" whileHover="hover">
+              <h4 className="text-xl font-bold text-blue-700">Full Stack & GenAI Engineer</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Anypli — Feb 2026 – July 2026</p>
-               <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
-    <li>
-      Designed and developed <strong>SkinTalk</strong>, a GenAI-powered community platform for cosmetic product analysis using <strong>React.js, Laravel, and MySQL</strong>.
-    </li>
-    <li>
-      Deployed <strong>FastAPI microservices</strong> on <strong>Hugging Face Spaces</strong>, integrating <strong>PaddleOCR, LLMs (Qwen2.5), and a RAG pipeline</strong> for automated ingredient list processing.
-    </li>
-    <li>
-      Engineered a personalized <strong>compatibility engine</strong> that maps product ingredients to user skin profiles (type, allergies, concerns) to generate scores, confidence levels, and tailored explanations.
-    </li>
-    <li>
-      Built a hybrid recommendation system using <strong>FAISS vector embeddings</strong>, featuring a <strong>&quot;Dupe Finder&quot;</strong> and <strong>&quot;Skin Twin&quot;</strong> matching for high-precision product suggestions.
-    </li>
-    <li>
-      Implemented real-time features with <strong>WebSockets</strong>, secure <strong>JWT/OAuth 2.0</strong> authentication, and a containerized architecture using <strong>Docker</strong>.
-    </li>
-    <li>
-      Managed the full <strong>Agile SDLC</strong>, from requirements analysis and system design to deployment and continuous iterative improvements.
-    </li>
-  </ul>
+              <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-2">
+                <li>Designed and developed <strong>SkinTalk</strong>, a GenAI community platform for cosmetic analysis using <strong>React.js, Laravel, and MySQL</strong>.</li>
+                <li>Deployed <strong>FastAPI microservices</strong> on <strong>Hugging Face Spaces</strong>, integrating OCR, LLMs, and RAG for automated ingredient analysis.</li>
+                <li>Engineered a <strong>compatibility system</strong> mapping product ingredients to user skin profiles to generate scores and tailored explanations.</li>
+                <li>Developed a <strong>vector recommendation engine</strong> (FAISS) featuring &quot;Dupe Finder&quot; and &quot;Skin Twin&quot; matching functionalities.</li>
+                <li>Integrated <strong>WebSockets</strong> for real-time features and containerized the architecture with <strong>Docker</strong> in an Agile environment.</li>
+              </ul>
             </motion.div>
 
+            {/* Mediwave */}
             <motion.div variants={itemVariants} className="mb-6 border-l-4 border-blue-400 pl-4" whileHover="hover">
               <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Mediwave — July 2025 – Sept 2025</p>
@@ -87,6 +77,7 @@ const Resume = () => {
               </ul>
             </motion.div>
 
+            {/* Vaerdia Solutions */}
             <motion.div variants={itemVariants} className="border-l-4 border-gray-300 pl-4" whileHover="hover">
               <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Vaerdia Solutions — June 2024 – Aug 2024</p>
@@ -97,6 +88,7 @@ const Resume = () => {
             </motion.div>
           </motion.div>
 
+          {/* RIGHT COLUMN: Education & Certs */}
           <div className="flex flex-col gap-8">
             <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
               <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
@@ -105,7 +97,7 @@ const Resume = () => {
               <motion.div variants={itemVariants} className="mb-6" whileHover="hover">
                 <h4 className="text-lg font-bold text-blue-700">National Engineering Degree in Software Engineering</h4>
                 <p className="text-gray-600">ISSAT Sousse (2023 - 2026)</p>
-                <p className="text-xs text-gray-400 italic mt-1">Focus: Full Stack Dev & AI Integration</p>
+                <p className="text-xs text-gray-400 italic mt-1">Focus: Full Stack Dev &amp; AI Integration</p>
               </motion.div>
               <motion.div variants={itemVariants} whileHover="hover">
                 <h4 className="text-lg font-bold text-blue-700">Pre-engineering (MPI)</h4>
@@ -146,7 +138,7 @@ const Resume = () => {
         </motion.div>
 
         <motion.a
-          href="/cv ines angalis.pdf"
+          href="/cv_ines_angalis.pdf"
           download
           className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full mt-12 mx-auto block w-fit shadow-lg shadow-purple-900/20"
           whileHover={{ scale: 1.05 }}
