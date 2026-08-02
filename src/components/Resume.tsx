@@ -20,14 +20,13 @@ const Resume = () => {
     hover: { x: 5, transition: { duration: 0.2 } },
   }
 
-  // Combined old and new certifications
   const certifications = [
-    { name: "AI Fundamentals", provider: "IBM", image: "/ibm.png" }, // New
-    { name: "CyberOps Associate", provider: "Cisco", image: "/cisco.png" }, // New
-    { name: "CCNA 2 v7", provider: "Cisco", image: "/ccna.png" }, // Updated/New
-    { name: "CCNA 1", provider: "Cisco", image: "/ccna.png" }, // Old
-    { name: "DevNet Associate", provider: "Cisco", image: "/devnet.png" }, // Old
-    { name: "Cyber Threat Management", provider: "Cisco", image: "/cybertm.jpeg" }, // Old
+    { name: "AI Fundamentals", provider: "IBM", image: "/ibm.png" },
+    { name: "CyberOps Associate", provider: "Cisco", image: "/cisco.png" },
+    { name: "CCNA 2 v7", provider: "Cisco", image: "/ccna.png" },
+    { name: "CCNA 1", provider: "Cisco", image: "/ccna.png" },
+    { name: "DevNet Associate", provider: "Cisco", image: "/devnet.png" },
+    { name: "Cyber Threat Management", provider: "Cisco", image: "/cybertm.jpeg" },
   ]
 
   return (
@@ -49,24 +48,22 @@ const Resume = () => {
           variants={variants}
           className="grid md:grid-cols-2 gap-8"
         >
-          {/* LEFT COLUMN: Work Experience */}
           <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
             <h3 className="text-2xl font-bold mb-6 flex items-center text-purple-700">
               <FaBriefcase className="mr-2" /> Work Experience
             </h3>
 
-            {/* Anypli - Latest */}
             <motion.div variants={itemVariants} className="mb-6 border-l-4 border-purple-500 pl-4" whileHover="hover">
               <h4 className="text-xl font-bold text-blue-700">Full Stack Engineer (GenAI)</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Anypli — Feb 2026 – June 2026</p>
               <ul className="list-disc list-inside mt-2 text-gray-700 text-sm space-y-1">
                 <li>Architected a local <strong>RAG pipeline</strong> (Qwen2.5, FAISS, llama.cpp).</li>
                 <li>Automated ingredient extraction via <strong>PaddleOCR & Gemini Flash</strong>.</li>
-                <li>Built hybrid recommendation engines and a "Skin Twin" feature.</li>
+                {/* Fixed the quotation marks here */}
+                <li>Built hybrid recommendation engines and a &quot;Skin Twin&quot; feature.</li>
               </ul>
             </motion.div>
 
-            {/* Mediwave */}
             <motion.div variants={itemVariants} className="mb-6 border-l-4 border-blue-400 pl-4" whileHover="hover">
               <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Mediwave — July 2025 – Sept 2025</p>
@@ -76,7 +73,6 @@ const Resume = () => {
               </ul>
             </motion.div>
 
-            {/* Vaerdia Solutions */}
             <motion.div variants={itemVariants} className="border-l-4 border-gray-300 pl-4" whileHover="hover">
               <h4 className="text-xl font-bold text-blue-700">Full Stack Intern</h4>
               <p className="text-gray-600 font-semibold italic text-sm">Vaerdia Solutions — June 2024 – Aug 2024</p>
@@ -87,9 +83,7 @@ const Resume = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT COLUMN: Education & Certifications */}
           <div className="flex flex-col gap-8">
-            {/* Education Section - Split as requested */}
             <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
               <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
                 <FaGraduationCap className="mr-2" /> Education
@@ -106,7 +100,6 @@ const Resume = () => {
               </motion.div>
             </motion.div>
 
-            {/* Certifications Section - Combined */}
             <motion.div variants={sectionVariants} className="bg-white rounded-lg p-6 shadow-lg" whileHover="hover">
               <h3 className="text-2xl font-bold mb-4 flex items-center text-purple-700">
                 <FaCertificate className="mr-2" /> Certifications
@@ -138,7 +131,6 @@ const Resume = () => {
           </div>
         </motion.div>
 
-        {/* Download Button */}
         <motion.a
           href="/gaaloul_ines_resume.pdf"
           download
