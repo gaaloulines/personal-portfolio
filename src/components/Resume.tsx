@@ -23,8 +23,8 @@ const Resume = () => {
   const certifications = [
     { name: "AI Fundamentals", provider: "IBM", image: "/ibm.png" },
     { name: "CyberOps Associate", provider: "Cisco", image: "/cisco.png" },
-    { name: "CCNA 2 v7", provider: "Cisco", image: "/ccna.png" },
-    { name: "CCNA 1", provider: "Cisco", image: "/ccna.png" },
+    { name: "CCNA 2 v7", provider: "Cisco", image: "/ccna1.png" },
+    { name: "CCNA 1", provider: "Cisco", image: "/ccna1.png" },
     { name: "DevNet Associate", provider: "Cisco", image: "/devnet.png" },
     { name: "Cyber Threat Management", provider: "Cisco", image: "/cybertm.jpeg" },
   ]
@@ -132,7 +132,7 @@ const Resume = () => {
         </motion.div>
 
         <motion.a
-          href="/gaaloul_ines_resume.pdf"
+          href="/cv ines angalis.pdf"
           download
           className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full mt-12 mx-auto block w-fit shadow-lg shadow-purple-900/20"
           whileHover={{ scale: 1.05 }}
